@@ -2,6 +2,7 @@
 const imageSrc = "/profile.jpg";
 import Sidebar from "../components/Sidebar.astro";
 import Social from "../components/Social.astro";
+const LogoSrc = "/Logo.png";
 ---
 
 <!doctype html>
@@ -26,11 +27,14 @@ import Social from "../components/Social.astro";
 				<Social/>
 			</div>
 		</aside>
+
 		<main>
 			<slot name="mr"/>
 		</main>
-		<aside class="right">
 
+		<aside class="right">
+			<slot name="ab"/>
+			<img src={LogoSrc} alt="Logo Picture" class="logo-image" />
 		</aside>
 	</body>
 </html>
@@ -64,8 +68,9 @@ import Social from "../components/Social.astro";
 	main {
 		width: 64%;
 		height: 100vh;
-		background-color: rgb(254, 238, 238);
+		background-color: rgb(249, 234, 234);
 		display: flex;
+		flex-direction: column; 
 	}
 
  	.profile-image {
@@ -88,6 +93,15 @@ import Social from "../components/Social.astro";
 		flex-direction: column;
 		align-items: center; /* Center links */
 		margin-top: 10px;
+	}
+
+	.logo-image {
+		width: 40px;
+		height: 40px;
+		background-color: rgb(252, 252, 253);
+		border-radius: 50%;
+		margin-top: 92vh;
+		margin-left: 80%;
 	}
 
 </style>
