@@ -1,13 +1,16 @@
 ---
-
+import Projects from "../pages/Projects.astro"
+import Notes from "../pages/Notes.astro";
+import Services from "../pages/Services.astro";
+import CV from "../pages/CV.astro";
 ---
 
 <div class="sidebar">
   <a href="/">Home</a>
-  <a href="/">Projects</a>
-  <a href="/">Summaries</a>
-  <a href="/">Services</a>
-  <a href="/">CV</a>
+  <a href="/Projects">Projects</a>
+  <a href="/Notes">Notes</a>
+  <a href="/Services">Services</a>
+  <a href="/CV">CV</a>
 </div>
 
 
@@ -15,12 +18,12 @@
   .sidebar {
     width: 100%;
     background-color: rgb(72, 98, 133);
-    padding: 20px;
+    box-sizing: border-box; /* Prevents padding from increasing width */
+    overflow: hidden; /* Avoids weird artifacts */
   }
 
   .sidebar a {
     display: block;
-    margin: 0px 0;
     padding: 12px 20px;
     text-decoration: none;
     color: rgb(255, 255, 255);
