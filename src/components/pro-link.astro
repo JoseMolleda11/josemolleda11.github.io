@@ -1,0 +1,38 @@
+---
+
+---
+
+<div class="pro-link">
+    <div >
+      <slot name="onesection"/>
+        <a href="/">
+            <img src="/" alt="">
+            This project one
+        </a>            
+    </div>
+</div>
+
+<style>
+  .pro-link {
+    width: 100%;
+    background-color: rgb(254, 254, 254);
+    box-sizing: border-box; /* Prevents padding from increasing width */
+    overflow: hidden; /* Avoids weird artifacts */
+  }
+
+  .pro-link a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .pro-link a:hover {
+    background-color: #dcdde1;
+    transform: scale(1.03);
+  }
+
+</style>
