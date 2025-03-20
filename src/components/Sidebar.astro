@@ -24,7 +24,7 @@ import CV from "../pages/CV.astro";
 
   .sidebar a {
     display: block;
-    padding: 12em 20em;
+    padding: 12px 20px;
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 18px;
@@ -35,4 +35,9 @@ import CV from "../pages/CV.astro";
   .sidebar a:hover {
     background-color: #333b75;
   }
+
+  .sidebar a::selection {
+    background-color: #333b75;
+  }
+
 </style>
