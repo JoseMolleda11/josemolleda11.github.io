@@ -1,45 +1,24 @@
 ---
-import Projects from "../pages/Projects.astro"
+import Projects from "../pages/Projects.astro";
 import Notes from "../pages/Notes.astro";
 import Services from "../pages/Services.astro";
 import CV from "../pages/CV.astro";
 ---
 
-<div class="sidebar">
-  <a href="/">
+<div class="w-full bg-[#486285] overflow-hidden space-y-2 px-2">
+  <a href="/" class="block px-5 py-3 text-white text-lg rounded-lg transition-colors duration-300 hover:bg-[#333b75]">
     Home
   </a>
-  <a href="/Projects">Projects</a>
-  <a href="/Notes">Notes</a>
-  <a href="/Services">Services</a>
-  <a href="/CV">CV</a>
+  <a href="/Projects" class="block px-5 py-3 text-white text-lg rounded-lg transition-colors duration-300 hover:bg-[#333b75]">
+    Projects
+  </a>
+  <a href="/Notes" class="block px-5 py-3 text-white text-lg rounded-lg transition-colors duration-300 hover:bg-[#333b75]">
+    Notes
+  </a>
+  <a href="/Services" class="block px-5 py-3 text-white text-lg rounded-lg transition-colors duration-300 hover:bg-[#333b75]">
+    Services
+  </a>
+  <a href="/CV" class="block px-5 py-3 text-white text-lg rounded-lg transition-colors duration-300 hover:bg-[#333b75]">
+    CV
+  </a>
 </div>
-
-
-<style>
-  .sidebar {
-    width: 100%;
-    background-color: rgb(72, 98, 133);
-    box-sizing: border-box; /* Prevents padding from increasing width */
-    overflow: hidden; /* Avoids weird artifacts */
-  }
-
-  .sidebar a {
-    display: block;
-    padding: 12px 20px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-  }
-
-  .sidebar a:hover {
-    background-color: #333b75;
-  }
-
-  .sidebar a::selection {
-    background-color: #333b75;
-  }
-
-</style>

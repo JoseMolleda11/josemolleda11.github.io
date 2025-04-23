@@ -3,106 +3,40 @@ const imageSrc = "/profile.jpg";
 import Sidebar from "../components/Sidebar.astro";
 import Social from "../components/Social.astro";
 const LogoSrc = "/Logo.png";
+import "../styles/global.css";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/Logo.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Jose Molleda</title>
-	</head>
-	<body>
-		<aside class="left">
-			<slot name="jl"/>
-			<br><br><br>
-			<img src={imageSrc} alt="Profile Picture" class="profile-image" />
-			<br>
-			<div class="sidebar-container">
-				<Sidebar/>
-			</div>
-			<div>
-				<Social/>
-			</div>
-		</aside>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/Logo.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Jose Molleda</title>
+  </head>
+  <body class="flex w-full h-screen overflow-hidden">
+    <!-- Aside izquierdo -->
+    <aside class="w-[18%] h-full bg-[#486285] flex flex-col items-center py-4">
+      <slot name="jl" />
+      <img src={imageSrc} alt="Profile Picture" class="w-40 h-40 rounded-full object-cover transition-transform duration-200 hover:scale-105 mt-4" />
+      <div class="mt-4 w-full flex flex-col items-center">
+        <Sidebar />
+      </div>
+      <div class="mt-auto mb-4">
+        <Social />
+      </div>
+    </aside>
 
-		<main>
-			<slot name="mr"/>
-		</main>
+    <!-- Contenido principal -->
+    <main class="w-[64%] h-full bg-[#f9eaea] flex flex-col overflow-y-auto p-6">
+      <slot name="mr" />
+    </main>
 
-		<aside class="right">
-			<slot name="ab"/>
-			<img src={LogoSrc} alt="Logo Picture" class="logo-image" />
-		</aside>
-	</body>
+    <!-- Aside derecho -->
+    <aside class="w-[18%] h-full bg-[#ccd6e3] flex flex-col items-end justify-end p-4">
+      <slot name="ab" />
+      <img src={LogoSrc} alt="Logo Picture" class="w-10 h-10 bg-white rounded-full" />
+    </aside>
+  </body>
 </html>
-
-<style>
-	html,
-	body {
-		display: flex;
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
-	}
-
-	.left {
-		width: 18%;
-		height: 100vh;
-		display: flex;
-		background-color: rgb(72, 98, 133);
-		flex-direction: column; /* Stack elements vertically */
-	}
-
-	.right {
-		width: 18%;
-		height: 100vh;
-		display: flex;
-		background-color: rgb(204, 214, 227);
-		flex-direction: column; /* Stack elements vertically */
-	}
-
-	main {
-		width: 64%;
-		height: 100vh;
-		background-color: rgb(249, 234, 234);
-		display: flex;
-		flex-direction: column; 
-		overflow-y: auto;
-	}
-
- 	.profile-image {
-		width: 160px; /* Ajusta el tamaño según necesites */
-		height: 160px;
-		border-radius: 50%; /* Hace la imagen circular */
-		object-fit: cover;
-		transition: transform 0.2s ease-in-out;
-		display: block;
-		margin: 0 auto;
-  	}
-
-	.profile-image:hover {
-		transform: scale(1.03); /* Hace que la imagen crezca al acercar el cursor */
-	}
-
-	.sidebar-container {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center; /* Center links */
-		margin-top: 10px;
-	}
-
-	.logo-image {
-		width: 40px;
-		height: 40px;
-		background-color: rgb(255, 255, 255);
-		border-radius: 50%;
-		margin-top: 92vh;
-		margin-left: 80%;
-	}
-
-</style>
