@@ -17,13 +17,16 @@ import "../styles/global.css";
   </head>
   <body class="flex w-full h-screen overflow-hidden">
     <!-- Aside izquierdo -->
-    <aside class="w-[18%] h-full bg-[#486285] flex flex-col items-center py-4">
+    <aside class="w-[18%] h-full bg-[#486285] flex flex-col items-center">
       <slot name="jl" />
-      <img src={imageSrc} alt="Profile Picture" class="w-40 h-40 rounded-full object-cover transition-transform duration-200 hover:scale-105 mt-4" />
-      <div class="mt-4 w-full flex flex-col items-center">
+      <div class="pt-10">
+        <img src={imageSrc} alt="Profile Picture" 
+      class="w-40 h-40 rounded-full object-cover transition-transform duration-200 hover:scale-105 mt-4" />
+      </div>
+      <div class="mt-10 w-full flex flex-col items-center">
         <Sidebar />
       </div>
-      <div class="mt-auto mb-4">
+      <div class="mt-auto bottom-3 relative">
         <Social />
       </div>
     </aside>
@@ -31,12 +34,24 @@ import "../styles/global.css";
     <!-- Contenido principal -->
     <main class="w-[64%] h-full bg-[#f9eaea] flex flex-col overflow-y-auto p-6">
       <slot name="mr" />
+      <div class="text-center text-sm text-gray-600 mt-10">
+        <p>© 2025 Jose Molleda</p>
+        <p>
+          Developed by <span class="font-bold text-gray-800">Jose Molleda</span> using Astro
+        </p>
+      </div>
     </main>
 
     <!-- Aside derecho -->
-    <aside class="w-[18%] h-full bg-[#ccd6e3] flex flex-col items-end justify-end p-4">
+    <aside class="w-[18%] h-full bg-[#ccd6e3] relative">
       <slot name="ab" />
-      <img src={LogoSrc} alt="Logo Picture" class="w-10 h-10 bg-white rounded-full" />
-    </aside>
+      
+      <!-- Icono fijo al fondo -->
+      <div class="absolute bottom-4 right-4">
+        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md">
+          <img src={LogoSrc} alt="Logo Picture" class="w-7 h-7" />
+        </div>
+      </div>
+    </aside>    
   </body>
 </html>
