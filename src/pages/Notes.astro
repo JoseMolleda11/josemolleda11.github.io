@@ -1,15 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Magazine from '../components/magazines.astro';
 ---
 
 <Layout>
 	<aside slot="jl">
 
 	</aside>
-	<main>
-
+	<main slot="mr" class="m-6">
+		<h1 class="text-3xl font-bold">
+			Notes
+		</h1>
+		<hr class="border-t border-gray-400 my-1" />
 	</main>
-</Layout>
-<style>
+	<aside slot="ab">
+		<Magazine>
 
-</style>
+		</Magazine>
+	</aside>
+</Layout>
