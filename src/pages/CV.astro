@@ -4,18 +4,56 @@ import Magazine from '../components/magazines.astro';
 ---
 
 <Layout>
-	<aside slot="jl">
+  <aside slot="jl"></aside>
 
-	</aside>
-	<main slot="mr" class="m-6">
-		<h1 class="text-3xl font-bold">
-			Profile
-		</h1>
-		<hr class="border-t border-gray-400 my-1" />
-	</main>
-	<aside slot="ab">
-		<Magazine>
+  <main slot="mr" class="m-6">
+    <!-- Sección de Perfil -->
+    <h1 class="text-3xl font-bold">Profile</h1>
+    <hr class="border-t border-gray-400 my-1" />
+    <p class="text-justify pt-1">
+      I hold a degree in Industrial Engineering from UPC, specialized in Finance at UNI.
+      My professional background focuses on financial statement analysis, risk management,
+      report automation, and investments. I am recognized for optimizing processes and supporting
+      decision-making, and I seek new challenges in finance to apply and expand my knowledge.
+    </p>
 
-		</Magazine>
-	</aside>
+    <section class="bg-pink-50">
+		<h1 class="text-3xl font-bold">Experience</h1>
+		<hr class="border-t border-gray-400 my-2" />
+	  
+		<div class="flex flex-col space-y-4 relative pl-1">
+		  <!-- Línea vertical centrada -->
+		  <div class="absolute left-[0.67rem] top-3 bottom-2 w-[0.2rem] bg-indigo-900"></div>
+	  
+		  <!-- Primer ítem -->
+		  <div class="flex items-start space-x-4 relative">
+			<div class="w-4 h-4 bg-indigo-900 rounded-full mt-[0.65rem] z-10"></div>
+			<div class="pt-1">
+			  <h3 class="text-lg font-semibold text-black">Title Name</h3>
+			  <p class="text-sm text-gray-800">
+				[start year] to [end year] at [Study Center Name], [City], [Country]
+			  </p>
+			</div>
+		  </div>
+	  
+		  <!-- Segundo ítem -->
+		  <div class="flex items-start space-x-4 relative">
+			<div class="w-4 h-4 bg-indigo-900 rounded-full mt-[0.75rem] z-10"></div>
+			<div class="pt-1">
+			  <h3 class="text-lg font-semibold text-black">Title Name</h3>
+			  <p class="text-sm text-gray-800">
+				[start year] to [end year] at [Study Center Name], [City], [Country]
+			  </p>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  
+    </div>
+
+  </main>
+
+  <aside slot="ab">
+    <Magazine />
+  </aside>
 </Layout>
