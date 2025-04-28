@@ -7,7 +7,7 @@ import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -32,8 +32,10 @@ import "../styles/global.css";
     </aside>
 
     <!-- Contenido principal -->
-    <main class="w-[64%] h-full bg-[#f9eaea] flex flex-col overflow-y-auto p-3">
+    <main class="w-[64%] h-full bg-[#f9eaea] flex flex-col overflow-y-auto p-3 dark:bg-slate-800">
+
       <slot name="mr" />
+      
       <div class="text-center text-sm text-gray-600 mt-10">
         <p>© 2025 Jose Molleda</p>
         <p>
@@ -41,9 +43,63 @@ import "../styles/global.css";
         </p>
       </div>
     </main>
-
+    
+    
+    
     <!-- Aside derecho -->
     <aside class="w-[18%] h-full bg-[#ccd6e3] relative">
+
+      <!-- Script para cambiar entre modo claro y oscuro -->
+      <label for="darkmode" class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" id="darkmode" class="sr-only peer">
+    
+        <!-- Fondo del switch -->
+        <div class="w-16 h-8 bg-gray-300 rounded-full peer-checked:bg-gray-600 transition-all duration-300"></div>
+    
+        <!-- Botón blanco deslizante con icono -->
+        <div class="absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center transition-all duration-300 peer-checked:translate-x-8">
+          <svg id="icon" class="w-4 h-4 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <!-- Ícono inicial (sol) -->
+            <path d="M12 4V2m0 20v-2m10-8h-2M4 12H2m16.95 7.05l-1.414-1.414M6.464 6.464L5.05 5.05m13.9 0l-1.414 1.414M6.464 17.536l-1.414 1.414M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+          </svg>
+        </div>
+      </label>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const darkModeInput = document.getElementById('darkmode');
+          const icon = document.getElementById('icon');
+    
+          // 1. Cuando carga la página, leemos el estado guardado
+          if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+            darkModeInput.checked = true;
+            icon.innerHTML = '<path d="M21.75 15.75A9.75 9.75 0 0 1 8.25 2.25c0 5.385 4.365 9.75 9.75 9.75z"></path>';
+            icon.classList.remove('text-yellow-500');
+            icon.classList.add('text-gray-400');
+          }
+    
+          // 2. Cada vez que el usuario cambia el switch
+          darkModeInput.addEventListener('change', () => {
+            document.documentElement.classList.toggle('dark');
+    
+            if (darkModeInput.checked) {
+              // Activar modo oscuro
+              localStorage.setItem('theme', 'dark');
+              icon.innerHTML = '<path d="M21.75 15.75A9.75 9.75 0 0 1 8.25 2.25c0 5.385 4.365 9.75 9.75 9.75z"></path>';
+              icon.classList.remove('text-yellow-500');
+              icon.classList.add('text-gray-400');
+            } else {
+              // Desactivar modo oscuro
+              localStorage.setItem('theme', 'light');
+              icon.innerHTML = '<path d="M12 4V2m0 20v-2m10-8h-2M4 12H2m16.95 7.05l-1.414-1.414M6.464 6.464L5.05 5.05m13.9 0l-1.414 1.414M6.464 17.536l-1.414 1.414M12 8a4 4 4 0 100 8 4 4 0 000-8z"></path>';
+              icon.classList.remove('text-gray-400');
+              icon.classList.add('text-yellow-500');
+            }
+          });
+        });
+      </script>
+
       <slot name="ab" />
       
       <!-- Icono fijo al fondo -->
