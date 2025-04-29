@@ -17,7 +17,7 @@ import "../styles/global.css";
   </head>
   <body class="flex w-full h-screen overflow-hidden">
     <!-- Aside izquierdo -->
-    <aside class="w-[18%] h-full bg-[#486285] flex flex-col items-center">
+    <aside class="w-[18%] h-full bg-[#486285] flex flex-col items-center dark:bg-[#111a27]">
       <slot name="jl" />
       <div class="pt-10">
         <img src={imageSrc} alt="Profile Picture" 
@@ -32,11 +32,11 @@ import "../styles/global.css";
     </aside>
 
     <!-- Contenido principal -->
-    <main class="w-[64%] h-full bg-[#f9eaea] flex flex-col overflow-y-auto p-3 dark:bg-slate-800">
+    <main class="w-[64%] h-full bg-[#f9eaea] flex flex-col overflow-y-auto p-3 dark:bg-[#1c2b3e]">
 
       <slot name="mr" />
       
-      <div class="text-center text-sm text-gray-600 mt-10">
+      <div class="text-center text-sm text-gray-600 mt-10 dark:text-gray-300">
         <p>© 2025 Jose Molleda</p>
         <p>
           Developed by <span class="font-bold text-gray-800">Jose Molleda</span> using Astro
@@ -47,7 +47,7 @@ import "../styles/global.css";
     
     
     <!-- Aside derecho -->
-    <aside class="w-[18%] h-full bg-[#ccd6e3] relative">
+    <aside class="w-[18%] h-full bg-[#ccd6e3] relative dark:bg-[#111a27]">
 
       <!-- Script para cambiar entre modo claro y oscuro -->
       <label for="darkmode" class="relative inline-flex items-center cursor-pointer">

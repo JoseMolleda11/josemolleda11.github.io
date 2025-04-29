@@ -1,0 +1,45 @@
+---
+// Puedes importar un array de posts si quieres usar datos dinámicos
+const posts = [
+  {
+    title: "CSS",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    badge: "New",
+    tags: ["rust", "tokio"],
+  },
+  // {
+  //   title: "Demo Post 2",
+  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //   tags: [],
+  // }
+];
+---
+
+<section class="pt-2 transform hover:[--tw-scale-x:1.01] border border-gray-300 rounded">
+  {posts.map(post => (
+    <div class="flex items-start border-b pb-4">
+      <div class="w-44 h-32 bg-gray-100 flex items-center justify-center rounded-md">
+          <i class="fa-brands fa-css3-alt text-8xl text-[#283a98] text-center"></i>
+      </div>
+      <div class=" flex-1">
+        <div class="flex items-center gap-2">
+          <h3 class="text-xl font-bold text-slate-900">{post.title}</h3>
+          {post.badge && (
+            <span class="text-white bg-fuchsia-500 text-sm font-semibold px-3 py-1 rounded-full">{post.badge}</span>
+          )}
+        </div>
+        <p class="text-slate-600 mt-2">{post.description}</p>
+        {post.tags.length > 0 && (
+          <div class="flex gap-2 mt-4">
+            {post.tags.map(tag => (
+              <span class="border border-slate-800 text-slate-800 text-sm px-3 py-1 rounded-full">{tag}</span>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  ))}
+</section>
+
+<!-- Agrega Font Awesome para los iconos -->
+<script src="https://kit.fontawesome.com/180054f428.js" crossorigin="anonymous"></script>
