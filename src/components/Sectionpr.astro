@@ -6,22 +6,27 @@ const posts = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     badge: "New",
     tags: ["rust", "tokio"],
+    icon: "fa-css3-alt",
+    color: "#283a98"
   },
-  // {
-  //   title: "Demo Post 2",
-  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  //   tags: [],
-  // }
+  {
+    title: "JavaScript",
+    description: "JS es un lenguaje poderoso para la web.",
+    badge: "Popular",
+    tags: ["node", "express"],
+    icon: "fa-js-square",
+    color: "#f7df1e"
+  }
 ];
 ---
 
-<section class="pt-2 transform hover:[--tw-scale-x:1.01] border border-gray-300 rounded">
+<section class="pt-2">
   {posts.map(post => (
-    <div class="flex items-start border-b pb-4">
-      <div class="w-44 h-32 bg-gray-100 flex items-center justify-center rounded-md">
-          <i class="fa-brands fa-css3-alt text-8xl text-[#283a98] text-center"></i>
+    <div class="flex items-start pb-4 border-b-[0.03rem] border-b-slate-400 mb-5 transform transition-transform duration-300 hover:scale-[1.01]">
+      <div class="w-44 h-32 bg-gray-100 flex items-center justify-center rounded-md dark:bg-[#1c2b3e]">
+        <i class={`fa-brands ${post.icon} text-8xl text-center`} style={`color: ${post.color}`}></i>
       </div>
-      <div class=" flex-1">
+      <div class="flex-1">
         <div class="flex items-center gap-2">
           <h3 class="text-xl font-bold text-slate-900">{post.title}</h3>
           {post.badge && (
@@ -40,6 +45,7 @@ const posts = [
     </div>
   ))}
 </section>
+
 
 <!-- Agrega Font Awesome para los iconos -->
 <script src="https://kit.fontawesome.com/180054f428.js" crossorigin="anonymous"></script>

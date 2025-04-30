@@ -1,0 +1,48 @@
+---
+// Puedes importar un array de posts si quieres usar datos dinámicos
+const posts = [
+  {
+    title: "Financial Mathematics",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    badge: "New",
+    tags: ["rust", "tokio"],
+    icon: "fa-solid fa-calculator",
+    color: "#8d9196",
+    link: "/Financialmathematics" // <--- nueva página
+  },
+  // Puedes añadir más posts con su propio `link`
+];
+---
+
+<section class="pt-2">
+  {posts.map(post => (
+    <a href={post.link} class="block no-underline">
+      <div class="flex items-start pb-4 border-b-[0.03rem] border-b-slate-400 mb-5 transform transition-transform duration-300 hover:scale-[1.01] rounded">
+        <div class="w-44 h-32 bg-gray-100 flex items-center justify-center rounded-md dark:bg-[#1c2b3e]">
+          <i  class={`${post.icon} text-8xl text-center`}  style={`color: ${post.color}`}
+            class={`text-8xl text-center ${post.icon}`}
+          ></i>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-center gap-2">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">{post.title}</h3>
+            {post.badge && (
+              <span class="text-white bg-fuchsia-500 text-sm font-semibold px-3 py-1 rounded-full">{post.badge}</span>
+            )}
+          </div>
+          <p class="text-slate-600 mt-2 dark:text-slate-300">{post.description}</p>
+          {post.tags.length > 0 && (
+            <div class="flex gap-2 mt-4">
+              {post.tags.map(tag => (
+                <span class="border border-slate-800 text-slate-800 dark:text-white text-sm px-3 py-1 rounded-full">{tag}</span>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </a>
+  ))}
+</section>
+
+<!-- Agrega Font Awesome para los iconos -->
+<script src="https://kit.fontawesome.com/180054f428.js" crossorigin="anonymous"></script>

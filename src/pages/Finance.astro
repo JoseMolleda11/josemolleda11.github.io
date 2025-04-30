@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Magazine from '../components/magazines.astro';
+import Section from '../components/Sectionfi.astro'
 ---
 
 <Layout>
@@ -8,11 +9,11 @@ import Magazine from '../components/magazines.astro';
 
 	</aside>
 	<main slot="mr" class="m-6">
-		<h1 class="text-3xl font-bold">
+		<h1 class="text-3xl font-bold dark:text-gray-300 pb-4">
 			Finance
 		</h1>
-		<hr class="border-t border-gray-400 my-1" />
-		
+		<Section>
+		</Section>	
 	</main>
 	<aside slot="ab">
 		<Magazine>
