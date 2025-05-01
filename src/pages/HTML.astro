@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Magazine from '../components/magazines.astro';
+---
+
+<Layout>
+	<aside slot="jl">
+
+	</aside>
+	<main slot="mr" class="m-6">
+		<div>
+			<h1 class="text-center text-[1.9rem] font-bold dark:text-white">
+				HTML
+			</h1>
+			<h2 class="text-[1.7rem] font-bold border-b border-gray-400 text-indigo-500
+			 dark:text-indigo-300 mb-1" id="section-Types-of-elements">
+                Types of elements
+			</h2>
+			<h3 class="text-[1.6rem] font-bold text-green-800 dark:text-green-600" id="sub-section-element">
+				I) Section Element
+			</h3>
+			<h3 class="text-[1.6rem] font-bold text-green-800 dark:text-green-600" id="sub-grouping-elements">
+				II) Grouping Elements
+			</h3>
+			<h3 class="text-[1.6rem] font-bold text-green-800 dark:text-green-600">
+				III) Heading Elements
+			</h3>
+			<h3 class="text-[1.6rem] font-bold text-green-800 dark:text-green-600">
+				IV) Text Elements
+			</h3>
+			<p class=""> 
+			
+			</p>
+            <h2 class="text-[1.7rem] font-bold border-b border-gray-400 text-indigo-500
+			 dark:text-indigo-300 mb-1" id="section-Links">
+                Links
+			</h2>
+			
+		</div>
+	</main>
+	<aside slot="ab">
+		<div class="px-4">
+            <h2 class="text-lg font-bold text-center text-gray-800  dark:text-gray-400">
+                Index
+            </h2>
+            <section class="text-gray-700 dark:text-gray-300">
+            <a href="#section-Types-of-elements" class="hover:underline text-[1rem]">Types of elements</a><br>
+            &nbsp;&nbsp;<a href="#sub-section-element" class="hover:underline text-[0.9rem]">Section Element</a><br>
+            &nbsp;&nbsp;<a href="#sub-grouping-elements" class="hover:underline text-[0.9rem]">Grouping Elements</a><br>
+            <a href="#section-Links" class="hover:underline text-[1rem]">Links</a><br>
+            </section> 
+                      
+	</aside>
+</Layout>
+
+<script is:inline>
+	document.addEventListener("DOMContentLoaded", () => {
+	  const btn = document.getElementById("copy-btn");
+	  const code = document.getElementById("css-code");
+  
+	  if (btn && code) {
+		btn.addEventListener("click", () => {
+		  navigator.clipboard.writeText(code.innerText.trim()).then(() => {
+			btn.innerText = "Copiado ✅";
+			setTimeout(() => {
+			  btn.innerText = "Copiar";
+			}, 2000);
+		  });
+		});
+	  }
+	});
+</script>
