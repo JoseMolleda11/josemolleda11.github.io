@@ -8,15 +8,75 @@ import Magazine from '../components/magazines.astro';
 
 	</aside>
 	<main slot="mr" class="m-6">
-		<h1 class="text-3xl font-bold">
-			CSS
-		</h1>
-		<hr class="border-t border-gray-400 my-1" />
-        <h2 class="text-2xl font-bold">
-            Notes
-        </h2>
+		<div>
+			<h1 class="text-center text-[1.9rem] font-bold dark:text-white">
+				CSS
+			</h1>
+			<h2 class="text-[1.7rem] font-bold border-b border-gray-400 text-indigo-500
+			 dark:text-indigo-300 mb-1">
+				Box Model
+			</h2>
+			<h3 class="text-[1.6rem] font-bold text-green-800 dark:text-green-600">
+				I) Content
+			</h3>
+			<h3 class="text-[1.6rem] font-bold text-green-800 dark:text-green-600">
+				II) Padding
+			</h3>
+			<h3 class="text-[1.6rem] font-bold text-green-800 dark:text-green-600">
+				III) Border
+			</h3>
+			<h3 class="text-[1.6rem] font-bold text-green-800 dark:text-green-600">
+				IV) Margin
+			</h3>
+			<p class=""> 
+				<ul class="dark:text-white mb-2">
+					<li>- The space outside the element, between its border and other elements.</li>
+					<li>- Used to separate elements from each other.</li>
+				</ul>
+			</p>
+			<div class="relative bg-gray-200 dark:bg-gray-800 border border-gray-400 
+			dark:border-gray-700 rounded-lg  text-sm font-mono overflow-x-auto">
+				<button id="copy-btn" class="absolute top-2 right-3 text-blue-600 dark:text-blue-400 text-xs hover:underline">Copiar</button>
+				<pre><code id="css-code" class="dark:text-white">
+				img &#123;
+					margin-top: 10px;
+					margin-right: 5px;
+					margin-bottom: 15px;
+					margin-left: 20px;
+					/* Shorthand syntax: margin: top right bottom left */
+					margin: 10px 5px 15px 20px;
+				&#125;
+				</code></pre>
+			  </div>
+		</div>
 	</main>
 	<aside slot="ab">
 		
 	</aside>
 </Layout>
+
+<script is:inline>
+	document.addEventListener("DOMContentLoaded", () => {
+	  const btn = document.getElementById("copy-btn");
+	  const code = document.getElementById("css-code");
+  
+	  if (btn && code) {
+		btn.addEventListener("click", () => {
+		  navigator.clipboard.writeText(code.innerText.trim()).then(() => {
+			btn.innerText = "Copiado ✅";
+			setTimeout(() => {
+			  btn.innerText = "Copiar";
+			}, 2000);
+		  });
+		});
+	  }
+	});
+  </script>
+
+<!-- <code id="code-block">
+	&lt;&gt;
+	&lt;div class="bg-red-300 p-4"&gt;Bloque 1&lt;/div&gt;
+	&lt;div class="bg-blue-300 p-4"&gt;Bloque 2&lt;/div&gt;
+	&lt;div class="bg-green-300 p-4"&gt;Bloque 3&lt;/div&gt;
+	&lt;/div&gt;
+</code> -->

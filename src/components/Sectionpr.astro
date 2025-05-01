@@ -3,46 +3,46 @@
 const posts = [
   {
     title: "CSS",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Notes on Box Model.",
     badge: "New",
     tags: ["rust", "tokio"],
-    icon: "fa-css3-alt",
-    color: "#283a98"
+    icon: "fa-brands fa-css3-alt",
+    color: "#283a98",
+    link: "/CSS"
   },
-  {
-    title: "JavaScript",
-    description: "JS es un lenguaje poderoso para la web.",
-    badge: "Popular",
-    tags: ["node", "express"],
-    icon: "fa-js-square",
-    color: "#f7df1e"
-  }
+  
 ];
 ---
 
 <section class="pt-2">
   {posts.map(post => (
-    <div class="flex items-start pb-4 border-b-[0.03rem] border-b-slate-400 mb-5 transform transition-transform duration-300 hover:scale-[1.01]">
-      <div class="w-44 h-32 bg-gray-100 flex items-center justify-center rounded-md dark:bg-[#1c2b3e]">
-        <i class={`fa-brands ${post.icon} text-8xl text-center`} style={`color: ${post.color}`}></i>
-      </div>
-      <div class="flex-1">
-        <div class="flex items-center gap-2">
-          <h3 class="text-xl font-bold text-slate-900">{post.title}</h3>
-          {post.badge && (
-            <span class="text-white bg-fuchsia-500 text-sm font-semibold px-3 py-1 rounded-full">{post.badge}</span>
+    <a href={post.link} class="block no-underline">
+      <div class="flex items-start pb-4 border-b-[0.03rem] border-b-slate-400 mb-5 transform transition-transform duration-300 hover:scale-[1.01] rounded">
+        <div class="w-44 h-32 bg-gray-100 flex items-center justify-center rounded-md dark:bg-[#1c2b3e]">
+          {post.icon.includes(".png") || post.icon.includes(".jpg") || post.icon.includes(".svg") ? (
+            <img src={post.icon} alt="icon" class="h-16 w-16 object-contain" />
+          ) : (
+            <i class={`text-8xl text-center ${post.icon}`} style={`color: ${post.color}`}></i>
           )}
         </div>
-        <p class="text-slate-600 mt-2">{post.description}</p>
-        {post.tags.length > 0 && (
-          <div class="flex gap-2 mt-4">
-            {post.tags.map(tag => (
-              <span class="border border-slate-800 text-slate-800 text-sm px-3 py-1 rounded-full">{tag}</span>
-            ))}
+        <div class="flex-1">
+          <div class="flex items-center gap-2">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">{post.title}</h3>
+            {post.badge && (
+              <span class="text-white bg-fuchsia-500 text-sm font-semibold px-3 py-1 rounded-full">{post.badge}</span>
+            )}
           </div>
-        )}
+          <p class="text-slate-600 mt-2 dark:text-slate-300">{post.description}</p>
+          {post.tags.length > 0 && (
+            <div class="flex gap-2 mt-4">
+              {post.tags.map(tag => (
+                <span class="border border-slate-800 text-slate-800 dark:text-white text-sm px-3 py-1 rounded-full">{tag}</span>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </a>
   ))}
 </section>
 

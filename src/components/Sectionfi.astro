@@ -1,16 +1,16 @@
 ---
 // Puedes importar un array de posts si quieres usar datos dinámicos
+const LogoSrc = "/Logo.png";
 const posts = [
   {
     title: "Financial Mathematics",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     badge: "New",
     tags: ["rust", "tokio"],
-    icon: "fa-solid fa-calculator",
+    icon: "/Logo.png",
     color: "#8d9196",
     link: "/Financialmathematics" // <--- nueva página
   },
-  // Puedes añadir más posts con su propio `link`
 ];
 ---
 
@@ -19,9 +19,11 @@ const posts = [
     <a href={post.link} class="block no-underline">
       <div class="flex items-start pb-4 border-b-[0.03rem] border-b-slate-400 mb-5 transform transition-transform duration-300 hover:scale-[1.01] rounded">
         <div class="w-44 h-32 bg-gray-100 flex items-center justify-center rounded-md dark:bg-[#1c2b3e]">
-          <i  class={`${post.icon} text-8xl text-center`}  style={`color: ${post.color}`}
-            class={`text-8xl text-center ${post.icon}`}
-          ></i>
+          {post.icon.includes(".png") || post.icon.includes(".jpg") || post.icon.includes(".svg") ? (
+            <img src={post.icon} alt="icon" class="h-16 w-16 object-contain" />
+          ) : (
+            <i class={`text-8xl text-center ${post.icon}`} style={`color: ${post.color}`}></i>
+          )}
         </div>
         <div class="flex-1">
           <div class="flex items-center gap-2">
@@ -43,6 +45,7 @@ const posts = [
     </a>
   ))}
 </section>
+
 
 <!-- Agrega Font Awesome para los iconos -->
 <script src="https://kit.fontawesome.com/180054f428.js" crossorigin="anonymous"></script>
