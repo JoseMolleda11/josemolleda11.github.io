@@ -27,7 +27,7 @@ const posts = [
   {posts.map(post => (
     <a href={post.link} class="block no-underline">
       <div class="flex items-start pb-4 border-b-[0.03rem] border-b-slate-400 mb-5 transform transition-transform duration-300 hover:scale-[1.01] rounded">
-        <div class="w-44 h-32 bg-gray-100 flex items-center justify-center rounded-md dark:bg-[#1c2b3e]">
+        <div class="w-44 h-32 bg-white flex items-center justify-center rounded-md dark:bg-[#1c2b3e]">
           {post.icon.includes(".png") || post.icon.includes(".jpg") || post.icon.includes(".svg") ? (
             <img src={post.icon} alt="icon" class="h-16 w-16 object-contain" />
           ) : (
