@@ -20,26 +20,48 @@ import Magazine from '../components/magazines.astro';
 				HTML (HyperText Markup Language) is the standard language used to structure content on the web.
 			</p>
 			<div class="flex justify-center">
-				<table class="divide-y divide-gray-500 shadow-lg rounded-lg overflow-hidden my-2 ">
+				<table class="divide-y divide-gray-500 shadow-lg overflow-hidden my-3 border border-gray-400">
 					<thead class="bg-gray-500 text-white text-[1.1rem]">
 					  <tr>
-						<th class="px-3 text-left font-medium tracking-wider">Concept</th>
-						<th class="px-3 text-left font-medium tracking-wider">Description</th>
+						<th class="px-2 text-center tracking-wider ">Concept</th>
+						<th class="px-2 text-center tracking-wider">Description</th>
 					  </tr>
 					</thead>
-					<tbody class="bg-white divide-y divide-gray-500 text-[1rem]">
+					<tbody class=" divide-y divide-gray-500 text-[1rem]">
 					  <tr>
-						<td class="px-3 whitespace-nowrap text-gray-900">Elements</td>
-						<td class="px-3 whitespace-nowrap text-gray-700">Building blocks of HTML, written with tags like 
+						<td class="px-2 whitespace-nowrap text-gray-900 dark:text-white">Elements</td>
+						<td class="px-2 whitespace-nowrap text-gray-700 dark:text-white">Building blocks of HTML, written with tags like 
 							&lt;p&gt;, &lt;h1&gt;, &lt;div&gt;.&lt;/td&gt;</td>
 					  </tr>
 					  <tr>
-						<td class="px-3 whitespace-nowrap text-gray-900">Tags</td>
-						<td class="px-3 whitespace-nowrap text-gray-700">ana@example.com</td>
+						<td class="px-2 whitespace-nowrap text-gray-900 dark:text-white">Tags</td>
+						<td class="px-2 whitespace-nowrap text-gray-700 dark:text-white">Keywords wrapped in &lt; &gt; that define elements, 
+							e.g., &lt;h1&gt;Hello&lt;/h1&gt;.</td>
+					  </tr>
+					  <tr>
+						<td class="px-2 whitespace-nowrap text-gray-900 dark:text-white">Attributes</td>
+						<td class="px-2 whitespace-nowrap text-gray-700 dark:text-white">Extra information in tags, like class or href. 
+							Exa.: &lt;img src=&quot;img.jpg&quot; alt=&quot;A cat&quot;&gt;.</td>
+					  </tr>
+					  <tr>
+						<td class="px-2 whitespace-nowrap text-gray-900 dark:text-white">Nesting</td>
+						<td class="px-2 whitespace-nowrap text-gray-700 dark:text-white">Putting elements inside others. Example: 
+							&lt;div&gt;&lt;p&gt;Text&lt;/p&gt;&lt;/div&gt;.</td>
+					  </tr>
+					  <tr>
+						<td class="px-2 whitespace-nowrap text-gray-900 dark:text-white">Semantic HTML</td>
+						<td class="px-2 whitespace-nowrap text-gray-700 dark:text-white">Tags that give meaning, like &lt;header&gt;, 
+							&lt;nav&gt;, &lt;main&gt;, &lt;article&gt;.</td>
+					  </tr>
+					  <tr>
+						<td class="px-2 whitespace-nowrap text-gray-900 dark:text-white">Non-semantic</td>
+						<td class="px-2 whitespace-nowrap text-gray-700 dark:text-white">Tags like &lt;div&gt; and &lt;span&gt;, 
+							used for layout or styling only.</td>
 					  </tr>
 					</tbody>
 				</table>
 			</div>
+
 			<h2 class="text-[1.7rem] font-bold border-b border-gray-400 text-indigo-500
 			 dark:text-indigo-300 mb-1" id="section-Semantic">
 			 	Semantic HTML
@@ -60,14 +82,54 @@ import Magazine from '../components/magazines.astro';
 			<h3 class="text-[1.6rem] font-bold text-green-800 dark:text-green-600">
 				IV) Text Elements
 			</h3>
-			<p class=""> 
-			
+			<p class="dark:text-white text-justify text-[1.1rem]"> 
+				Use <code>&lt;a href=&quot;&quot;&gt;&lt;/a&gt;</code> to add links (video, image, URL).
 			</p>
+
             <h2 class="text-[1.7rem] font-bold border-b border-gray-400 text-indigo-500
 			 dark:text-indigo-300 mb-1" id="section-Links">
                 Links
 			</h2>
-			
+			<p class="text-justify text-[1.1rem]">
+				<ul class="dark:text-white ml-5" style="list-style-type: disc;">
+					<li>
+						Use <code class="bg-slate-300 dark:text-black">&lt;a href=&quot;&quot;&gt;&lt;/a&gt;</code> to add links (video, image, URL).
+					</li>
+					<li>
+						Use <span class="bg-slate-300 dark:text-black">"/""</span> for seek a file into your own project
+					</li>
+				</ul>
+			</p>
+			<div class="flex justify-center">
+				<table class="divide-y divide-gray-500 shadow-lg overflow-hidden my-3 border border-gray-400">
+					<thead class="bg-gray-500 text-white text-[1.1rem]">
+					  <tr >
+						<th class="px-2 tracking-wider text-center">Concept</th>
+						<th class="px-2 tracking-wider text-center">Description</th>
+					  </tr>
+					</thead>
+					<tbody class=" divide-y divide-gray-500 text-[1rem]">
+					  <tr >
+						<td class="px-2  text-gray-900 dark:text-white text-center">href=""</td>
+						<td class="px-2  text-gray-700 dark:text-white text-justify"><code>It's mandatory, href=&quot;destination&quot;</code>, indicating that the <em>href</em> 
+							attribute is required for an anchor (<code>&lt;a&gt;</code>) tag.</td>
+					  </tr>
+					  <tr >
+						<td class="px-2 text-gray-900 dark:text-white text-center">target="_blank"</td>
+						<td class="px-2 text-gray-700 dark:text-white text-justify">It's an optional attribute in an HTML <code>&lt;a&gt;</code> tag that opens 
+							the linked destination in a <strong>new browser tab</strong>. (Mostly used for external links)</td>
+					  </tr>
+					  <tr>
+						<td class="px-2 text-gray-900 dark:text-white text-center">rel="nofollow"</td>
+						<td class="px-2 text-gray-700 dark:text-white text-justify">
+						  It's an optional attribute in an HTML <code>&lt;a&gt;</code> tag that tells search engines 
+						  <strong>not to follow</strong> the link, meaning it <strong>does not pass SEO ranking (PageRank) to the linked page</strong>.
+						</td>
+					  </tr>
+					</tbody>
+				</table>
+			</div>
+
 		</div>
 	</main>
 	<aside slot="ab">
