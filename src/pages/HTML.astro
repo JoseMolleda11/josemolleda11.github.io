@@ -13,7 +13,7 @@ import Magazine from '../components/magazines.astro';
 				HTML
 			</h1>
 			<h2 class="text-[1.7rem] font-bold border-b border-gray-400 text-indigo-500
-			 dark:text-indigo-300 mb-1" id="section-Intro">
+			 dark:text-indigo-300 mb-2" id="section-Intro">
 			 	Introduction
 			</h2>
 			<p class="dark:text-white text-justify text-[1.1rem]">
@@ -63,23 +63,23 @@ import Magazine from '../components/magazines.astro';
 			</div>
 
 			<h2 class="text-[1.7rem] font-bold border-b border-gray-400 text-indigo-500
-			 dark:text-indigo-300 mb-1" id="section-Semantic">
+			 dark:text-indigo-300 mb-2" id="section-Semantic">
 			 	Semantic HTML
 			</h2>
 			<p class="dark:text-white text-justify text-[1.1rem]">
 				Semantic elements in HTML are used to clearly describe the meaning and structure of the content within the webpage. 
 				They help both browsers and developers understand the content better.
 			</p>
-			<h3 class="text-[1.6rem] font-bold text-green-800 dark:text-green-600" id="sub-section-element">
+			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600" id="sub-section-element">
 				I) Section Element
 			</h3>
-			<h3 class="text-[1.6rem] font-bold text-green-800 dark:text-green-600" id="sub-grouping-elements">
+			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600" id="sub-grouping-elements">
 				II) Grouping Elements
 			</h3>
-			<h3 class="text-[1.6rem] font-bold text-green-800 dark:text-green-600">
+			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600">
 				III) Heading Elements
 			</h3>
-			<h3 class="text-[1.6rem] font-bold text-green-800 dark:text-green-600">
+			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600">
 				IV) Text Elements
 			</h3>
 			<p class="dark:text-white text-justify text-[1.1rem]"> 
@@ -87,7 +87,7 @@ import Magazine from '../components/magazines.astro';
 			</p>
 
             <h2 class="text-[1.7rem] font-bold border-b border-gray-400 text-indigo-500
-			 dark:text-indigo-300 mb-1" id="section-Links">
+			 dark:text-indigo-300 mb-2" id="section-Links">
                 Links
 			</h2>
 			<p class="text-justify text-[1.1rem]">
@@ -126,10 +126,68 @@ import Magazine from '../components/magazines.astro';
 						  <strong>not to follow</strong> the link, meaning it <strong>does not pass SEO ranking (PageRank) to the linked page</strong>.
 						</td>
 					  </tr>
+					  <tr>
+						<td class="px-2 text-gray-900 dark:text-white text-center">download=""</td>
+						<td class="px-2 text-gray-700 dark:text-white text-justify">
+						  It uses to download a file.
+						</td>
+					  </tr>
 					</tbody>
 				</table>
 			</div>
-
+			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600 mb-2" id="sub-paths">
+				I) Relative and Absolute Paths
+			</h3>
+			<p class="text-justify text-[1.1rem]">
+				<ul class="dark:text-white ml-5" style="list-style-type: disc;">
+					<li >
+						<strong>Absolute Path:</strong> It's the full address (URL) of a resource on the web. It is generally used to reference external files. Example:
+						<em>&lt;a href="https://...."&gt;...&lt;/a&gt;</strong></em>
+					</li>
+					<li >
+						<strong>Relative Path:</strong> It defines the location of a file in relation to the current HTML file. It is used to access files within 
+						the same project or domain.
+					</li>
+					<ul class="dark:text-white ml-5" style="list-style-type: none;">
+						<li>
+							<strong>-&gt; Relative path to the root (/):</strong> <em>&lt;a href=&quot;/&quot;&gt;Ir al home&lt;/a&gt;</em>
+						</li>
+						<li>
+							<strong>-&gt; Relative path to the origin (../):</strong> <em>&lt;a href=&quot;../index.html&quot;&gt;Ir al home&lt;/a&gt;</em>
+						</li>
+					</ul>
+					<li>
+						If the destination is in the same folder. Use just the file name: 
+						<div class="relative bg-gray-200 dark:bg-gray-800 border border-gray-400 dark:border-gray-700 rounded-lg text-sm font-mono overflow-x-auto">
+							<pre><code>
+							&lt;a href=&quot;file.html&quot;&gt; Go to file &lt;/a&gt;
+							</code></pre>
+							<button class="copy-btn absolute top-2 right-3 text-blue-600 dark:text-blue-400 text-xs hover:underline">Copiar</button>
+						</div>
+					</li>
+					<li>
+						If the destination is in a subfolder. Use the folder name followed by the file name: 					
+						<div class="relative bg-gray-200 dark:bg-gray-800 border border-gray-400 dark:border-gray-700 rounded-lg text-sm font-mono overflow-x-auto">
+							<pre><code>
+						&lt;a href=&quot;folder/file.html&quot;&gt; Go to file &lt;/a&gt;
+							</code></pre>
+							<button class="copy-btn absolute top-2 right-3 text-blue-600 dark:text-blue-400 text-xs hover:underline">Copiar</button>
+						</div>
+					</li>
+					<li>
+						If the destination is in a parent folder. Use <strong>../</strong> to move up one level: Use <strong>../</strong> to move up one level:				
+						<div class="relative bg-gray-200 dark:bg-gray-800 border border-gray-400 dark:border-gray-700 rounded-lg text-sm font-mono overflow-x-auto">
+							<pre><code>
+							&lt;a href=&quot;../file.html&quot;&gt; Go to file &lt;/a&gt;
+							</code></pre>
+							<button class="copy-btn absolute top-2 right-3 text-blue-600 dark:text-blue-400 text-xs hover:underline">Copiar</button>
+						</div>
+					</li>
+				</ul>
+			</p>
+			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600 mb-2" id="sub-internal-links">
+				II) Internal Links
+			</h3>
 		</div>
 	</main>
 	<aside slot="ab">
@@ -143,6 +201,8 @@ import Magazine from '../components/magazines.astro';
             &nbsp;&nbsp;<a href="#sub-section-element" class="hover:underline text-[0.9rem]">Section Element</a><br>
             &nbsp;&nbsp;<a href="#sub-grouping-elements" class="hover:underline text-[0.9rem]">Grouping Elements</a><br>
             <a href="#section-Links" class="hover:underline text-[1rem]">Links</a><br>
+			&nbsp;&nbsp;<a href="#sub-paths" class="hover:underline text-[0.9rem]">Relative and Absolute Paths</a><br>
+            &nbsp;&nbsp;<a href="#sub-internal-links" class="hover:underline text-[0.9rem]">Internal Links</a><br>
             </section> 
                       
 	</aside>
@@ -150,18 +210,20 @@ import Magazine from '../components/magazines.astro';
 
 <script is:inline>
 	document.addEventListener("DOMContentLoaded", () => {
-	  const btn = document.getElementById("copy-btn");
-	  const code = document.getElementById("css-code");
-  
-	  if (btn && code) {
+	  const buttons = document.querySelectorAll(".copy-btn");
+	
+	  buttons.forEach((btn) => {
 		btn.addEventListener("click", () => {
-		  navigator.clipboard.writeText(code.innerText.trim()).then(() => {
-			btn.innerText = "Copiado ✅";
-			setTimeout(() => {
-			  btn.innerText = "Copiar";
-			}, 2000);
-		  });
+		  const code = btn.previousElementSibling; // Busca el <code>
+		  if (code) {
+			navigator.clipboard.writeText(code.innerText.trim()).then(() => {
+			  btn.innerText = "Copiado ✅";
+			  setTimeout(() => {
+				btn.innerText = "Copiar";
+			  }, 2000);
+			});
+		  }
 		});
-	  }
+	  });
 	});
 </script>
