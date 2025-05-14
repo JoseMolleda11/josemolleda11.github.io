@@ -265,7 +265,68 @@ import Magazine from '../components/magazines.astro';
 					</li>
 				</ul>
 			</p>
-			
+			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600 mb-1 mt-1" id="sub-typesimages">
+				I) Types of images
+			</h3>
+			<p class="text-justify text-[1.1rem]">
+				<ul class="dark:text-white ml-5" style="list-style-type: disc;">
+					<li>
+						<strong>Vector:</strong> They are mathematical (created with formulas) and do not have resolution, meaning they do not pixelate at any zoom level.
+					</li>
+					<li>
+						<strong>Bitmap:</strong> They consist of many colored squares (pixels) that together form an image. The more pixels, the higher the 
+						image quality. At a certain zoom level, they pixelate (the pixels become visible).
+					</li>
+				</ul>
+			</p>
+			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600 mb-1 mt-1" id="sub-image.formats">
+				II) Image formats
+			</h3>
+			<p class="text-justify text-[1.1rem]">
+				<ul class="dark:text-white ml-5" style="list-style-type: disc;">
+					<li>
+						<code class="bg-slate-300 dark:text-black">.svg</code> -&gt; vector
+					</li>
+					<li>
+						<code class="bg-slate-300 dark:text-black">.jpg,.jpeg</code> -&gt; for photographs
+					</li>
+					<li>
+						<code class="bg-slate-300 dark:text-black">.png</code> -&gt; for transparencies or flat colors 
+					</li>
+					<li>
+						<code class="bg-slate-300 dark:text-black">.gif</code> -&gt; used for animations or short videos (less than 10 seconds)
+					</li>
+					<li>
+						<code class="bg-slate-300 dark:text-black">.webp</code> -&gt; has better compression than webp
+					</li>
+					<li>
+						<code class="bg-slate-300 dark:text-black">.heif</code> -&gt; Apple's format for photographs, not recommended for the web
+					</li>
+				</ul>
+			</p>
+			<div class="bg-[#152549] text-white p-2 rounded-md border border-[#1e293b] relative mt-2">
+				<div class="flex items-start space-x-2">
+					<svg class="text-blue-500 w-5 h-5 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z" />
+					</svg>
+					<div>
+					<p class="text-blue-400 font-semibold mb-1">Note</p>
+					<p>Use it to compress files: 
+						<a href="https://tinypng.com/" class="text-pink-400 underline hover:text-pink-300" target="_blank">https://tinypng.com/</a>
+					</p>
+					</div>
+				</div>
+				<div class="absolute top-2 right-2 text-gray-400">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2m2 0h4m-4 0a2 2 0 104 0" />
+					</svg>
+				</div>
+			</div>
+			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600 mb-1 mt-1" id="sub-multiple.images">
+				III) Multiple images
+			</h3>
+		
+
 		</div>
 	</main>
 	<aside slot="ab">
@@ -284,6 +345,9 @@ import Magazine from '../components/magazines.astro';
             &nbsp;&nbsp;<a href="#sub-internal-links" class="hover:underline text-[0.9rem]">Internal Links</a><br>
 			
 			<a href="#section-Embedded" class="hover:underline text-[1rem]">Embedded content</a><br>	
+			&nbsp;&nbsp;<a href="#sub-typesimages" class="hover:underline text-[0.9rem]">Types of images</a><br>
+			&nbsp;&nbsp;<a href="#sub-image.formats" class="hover:underline text-[0.9rem]">Image formats</a><br>
+			&nbsp;&nbsp;<a href="#sub-multiple.images" class="hover:underline text-[0.9rem]">Multiple images</a><br>
             </section>
 	</aside>
 </Layout>
