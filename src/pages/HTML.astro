@@ -265,11 +265,10 @@ import Magazine from '../components/magazines.astro';
 					</li>
 				</ul>
 			</p>
-			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600 mb-1 mt-1" id="sub-typesimages">
-				I) Types of images
-			</h3>
-			<p class="text-justify text-[1.1rem]">
-				<ul class="dark:text-white ml-5" style="list-style-type: disc;">
+			<p class="dark:text-[rgb(238,88,88)] text-justify text-[rgb(24,24,103)] my-1">
+				<strong>✦ Types of images:</strong>
+				<p class="text-justify text-[1.1rem]">
+				<ul class="dark:text-white ml-7 text-justify" style="list-style-type: disc;">
 					<li>
 						<strong>Vector:</strong> They are mathematical (created with formulas) and do not have resolution, meaning they do not pixelate at any zoom level.
 					</li>
@@ -278,9 +277,10 @@ import Magazine from '../components/magazines.astro';
 						image quality. At a certain zoom level, they pixelate (the pixels become visible).
 					</li>
 				</ul>
-			</p>
-			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600 mb-1 mt-1" id="sub-image.formats">
-				II) Image formats
+				</p>
+			</p>			
+			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600 mb-1" id="sub-image.formats">
+				I) Image formats
 			</h3>
 			<p class="text-justify text-[1.1rem]">
 				<ul class="dark:text-white ml-5" style="list-style-type: disc;">
@@ -323,7 +323,7 @@ import Magazine from '../components/magazines.astro';
 				</div>
 			</div>
 			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600 mb-1 mt-1" id="sub-multiple.images">
-				III) Multiple images
+				II) Multiple images
 			</h3>
 			<p class="dark:text-white text-justify">
 				The HTML code in the image is using the <strong>&lt;picture&gt;</strong> element to provide multiple image formats for better 
@@ -355,6 +355,36 @@ import Magazine from '../components/magazines.astro';
 				</ul>
 				</p>
 			</p>
+			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600 mb-1 mt-1" id="sub-figure">
+				III) Figure
+			</h3>
+			<p class="dark:text-white text-justify">
+				The HTML code in the image correctly uses the 
+				<code class="text-blue-800 dark:text-blue-500">&lt;figure&gt;</code> 
+				element to group an image 
+				(<code class="text-blue-800 dark:text-blue-500">&lt;img&gt;</code>) 
+				and its caption 
+				(<code class="text-blue-800 dark:text-blue-500">&lt;figcaption&gt;</code>), 
+				which improves accessibility and semantics.
+			</p>
+			<div class="relative bg-gray-200 dark:bg-gray-800 border border-gray-400 dark:border-gray-700 rounded-lg dark:text-white text-[0.9rem] my-1">
+				<pre><code>	
+		<code class="text-blue-800 dark:text-blue-500">&lt;figure&gt;</code>
+			<code class="text-blue-800 dark:text-blue-500">&lt;picture&gt;</code>
+				<code class="text-blue-800 dark:text-blue-500">&lt;source srcset=&quot;/img/donald.webp&quot; type=&quot;image/webp&quot;&gt;</code>
+				<code class="text-blue-800 dark:text-blue-500">&lt;img src=&quot;/img/donald.jpg&quot; alt=&quot;Cara del Pato Donald&quot;&gt;</code>
+			<code class="text-blue-800 dark:text-blue-500">&lt;/picture&gt;</code>
+			<code class="text-blue-800 dark:text-blue-500">&lt;figcaption&gt;</code> Imagen del Pato Donald para EDteam <code class="text-blue-800 dark:text-blue-500">&lt;/figcaption&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&lt;/figure&gt;</code>
+				</code></pre>
+				<button class="copy-btn absolute top-2 right-3 text-blue-600 dark:text-blue-400 text-xs hover:underline">Copiar</button>
+			</div>
+			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600 mb-1 mt-1" id="sub-videooraudio">
+				IV) Video or audio
+			</h3>
+			<p class="dark:text-white text-justify">
+				It prefer use YouTube, Instagram, Facebook.... use the code from the same page.
+			</p>
 		</div>
 	</main>
 	<aside slot="ab">
@@ -373,9 +403,10 @@ import Magazine from '../components/magazines.astro';
             &nbsp;&nbsp;<a href="#sub-internal-links" class="hover:underline text-[0.9rem]">Internal Links</a><br>
 			
 			<a href="#section-Embedded" class="hover:underline text-[1rem]">Embedded content</a><br>	
-			&nbsp;&nbsp;<a href="#sub-typesimages" class="hover:underline text-[0.9rem]">Types of images</a><br>
 			&nbsp;&nbsp;<a href="#sub-image.formats" class="hover:underline text-[0.9rem]">Image formats</a><br>
 			&nbsp;&nbsp;<a href="#sub-multiple.images" class="hover:underline text-[0.9rem]">Multiple images</a><br>
+			&nbsp;&nbsp;<a href="#sub-figure" class="hover:underline text-[0.9rem]">Figure</a><br>
+			&nbsp;&nbsp;<a href="#sub-videooraudio" class="hover:underline text-[0.9rem]">Video or audio</a><br>
             </section>
 	</aside>
 </Layout>
