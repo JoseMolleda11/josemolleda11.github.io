@@ -427,13 +427,16 @@ import Magazine from '../components/magazines.astro';
 			<p class="text-justify text-[1.1rem]">
 				<ul class="dark:text-white ml-7" style="list-style-type: disc;">
 					<li>
-						The <strong>&lt;table&gt;.....&lt;/table&gt;</strong> tag, which defines the table.
+						<strong>&lt;table&gt;:</strong> Defines a table.
 					</li>
 					<li>
-						The <strong>&lt;tr&gt;.....&lt;/tr&gt;</strong> tag, which represents a table row.
+						<strong>&lt;th&gt;:</strong> Defines a table header cell.
 					</li>
 					<li>
-						The <strong>&lt;td&gt;.....&lt;/td&gt;</strong> tag, which represents a cell (table data) within a row.
+						<strong>&lt;tr&gt;:</strong> Represents a table row.
+					</li>
+					<li>
+						<strong>&lt;td&gt;:</strong> Represents a table cell.
 					</li>
 				</ul>
 			</p>
@@ -465,16 +468,37 @@ import Magazine from '../components/magazines.astro';
 				</code></pre>
 				<button class="copy-btn absolute top-2 right-3 text-blue-600 dark:text-blue-400 text-xs hover:underline">Copiar</button>
 			</div>
-			<p class="dark:text-[rgb(238,88,88)] text-justify text-[rgb(24,24,103)] mt-1">
+			<div class="dark:text-[rgb(238,88,88)] text-justify text-[rgb(24,24,103)] mt-1">
 				<strong>✦ Merging Cells:</strong>
-				<p class="text-justify text-[1.1rem]">
-				<ul class="dark:text-white ml-7" style="list-style-type: disc;">
-					<li>
-						
-					</li>
-				</ul>
-				</p>
-			</p>
+				<div class="text-justify text-[1.1rem]">
+					<ul class="dark:text-white ml-7 text-black" style="list-style-type: disc;">
+						<li>
+							The attributes <strong>colspan</strong> and <strong>rowspan</strong> are used to merge table cells in an HTML table.
+						</li>
+					</ul>
+				</div>
+				<strong>✦ Attributes Used:</strong>
+				<div class="text-justify text-[1.1rem]">
+					<ul class="dark:text-white ml-7 text-black" style="list-style-type: disc;">
+						<li><strong>colspan=n:</strong> This merges <strong>n</strong> columns into a single cell.</li>
+						<li><strong>rowspan=n:</strong> This merges <strong>n</strong> rows into a single cell.</li>
+					</ul>
+				</div>
+				<strong>✦ Meaning of n:</strong>
+				<div class="text-justify text-[1.1rem]">
+					<ul class="dark:text-white ml-7 text-black" style="list-style-type: disc;">
+						<li><strong>n</strong> represents the number of columns or rows that will be combined or grouped together.</li>
+					</ul>
+				</div>
+				<strong>✦ &lt;colgroup&gt;:</strong>
+				<div class="text-justify text-[1.1rem]">
+					<ul class="dark:text-white ml-7 text-black" style="list-style-type: disc;">
+						<li>The &lt;colgroup&gt; element is used to apply styles to multiple columns in an HTML table.</li>
+						<li>It contains &lt;col&gt; elements, which define properties for specific columns.</li>
+						<li>&lt;col span=&quot;3&quot;&gt; means that this column spans across 3 columns in the table.</li>
+					</ul>
+				</div>
+			</div>
 
 		</div>
 	</main>
