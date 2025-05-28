@@ -84,20 +84,20 @@ import Magazine from '../components/magazines.astro';
 				<strong>✦ Basic Structure</strong>
 				<div class="relative bg-gray-200 dark:bg-gray-800 border border-gray-400 dark:border-gray-700 rounded-lg font-mono overflow-x-auto dark:text-white text-[0.9rem] my-1">
 				<pre><code>
-			<code class="text-blue-800 dark:text-blue-500">&lt;!DOCTYPE html&gt;</code>
-			<code class="text-blue-800 dark:text-blue-500">&lt;html&gt;</code>
-			<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&lt;head&gt;</code>
-			<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;</code> Page Title <code class="text-blue-800 dark:text-blue-500">&lt;/title&gt;</code>
-			<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&lt;/head&gt;</code>					
-			<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&lt;body&gt;</code>
-			<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;</code> ... <code class="text-blue-800 dark:text-blue-500">&lt;/header&gt;</code>
-			<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&gt;</code> ... <code class="text-blue-800 dark:text-blue-500">&lt;/nav&gt;</code>
-			<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&lt;main&gt;</code>
-			<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;section&gt;</code> ... <code class="text-blue-800 dark:text-blue-500">&lt;/section&gt;</code>
-			<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/main&gt;</code>
-			<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&gt;</code> ... <code class="text-blue-800 dark:text-blue-500">&lt;/footer&gt;</code>
-			<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&lt;/body&gt;</code>
-			<code class="text-blue-800 dark:text-blue-500">&lt;/html&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&lt;!DOCTYPE html&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&lt;html&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&lt;head&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;</code> Page Title <code class="text-blue-800 dark:text-blue-500">&lt;/title&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&lt;/head&gt;</code>					
+		<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&lt;body&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;</code> ... <code class="text-blue-800 dark:text-blue-500">&lt;/header&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&gt;</code> ... <code class="text-blue-800 dark:text-blue-500">&lt;/nav&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&lt;main&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;section&gt;</code> ... <code class="text-blue-800 dark:text-blue-500">&lt;/section&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/main&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&gt;</code> ... <code class="text-blue-800 dark:text-blue-500">&lt;/footer&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&nbsp;&nbsp;&lt;/body&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&lt;/html&gt;</code>
 				</code></pre>
 				<button class="copy-btn absolute top-2 right-3 text-blue-600 dark:text-blue-400 text-xs hover:underline">Copiar</button>
 			</div>
@@ -114,6 +114,46 @@ import Magazine from '../components/magazines.astro';
 			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600" id="sub-section-element">
 				I) Section Element
 			</h3>
+			<p class="text-justify text-[1.1rem]">
+				<ul class="dark:text-white ml-5 text-justify" style="list-style-type: disc;">
+					<li>
+						<strong>&lt;nav&gt;:</strong> The tag is used to define a navigation section in a webpage. It typically contains links to other parts of the site or to 
+						external resources.
+						<div class="relative bg-gray-200 dark:bg-gray-800 border border-gray-400 dark:border-gray-700 rounded-lg text-[0.9rem] font-mono overflow-x-auto">
+							<pre><code>
+	<code class="text-blue-800 dark:text-blue-500">&lt;nav&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&lt;ul&gt;</code>
+			<code class="text-blue-800 dark:text-blue-500">&lt;li&gt;&lt;a href=&quot;/home&quot;&gt;</code>Home<code class="text-blue-800 dark:text-blue-500">&lt;/a&gt;&lt;/li&gt;</code>
+			<code class="text-blue-800 dark:text-blue-500">&lt;li&gt;&lt;a href=&quot;/about&quot;&gt;</code>About Us<code class="text-blue-800 dark:text-blue-500">&lt;/a&gt;&lt;/li&gt;</code>
+			<code class="text-blue-800 dark:text-blue-500">&lt;li&gt;&lt;a href=&quot;/services&quot;&gt;</code>Services<code class="text-blue-800 dark:text-blue-500">&lt;/a&gt;&lt;/li&gt;</code>
+			<code class="text-blue-800 dark:text-blue-500">&lt;li&gt;&lt;a href=&quot;/contact&quot;&gt;</code>Contact<code class="text-blue-800 dark:text-blue-500">&lt;/a&gt;&lt;/li&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&lt;/ul&gt;</code>
+	<code class="text-blue-800 dark:text-blue-500">&lt;/nav&gt;</code>
+							</code></pre>
+							<button class="copy-btn absolute top-2 right-3 text-blue-600 dark:text-blue-400 text-xs hover:underline">Copiar</button>
+						</div>
+						<p class="dark:text-[rgb(238,88,88)] text-justify text-[rgb(24,24,103)] my-1">
+				<strong>Key Points:</strong>
+				<p class="text-justify text-[1.1rem]">
+				<ul class="dark:text-white ml-7 text-justify" style="list-style-type: disc;">
+					<li>
+						It helps semantically organize the navigation links.
+					</li>
+					<li>
+						It can appear multiple times on a page (e.g., main menu, footer links).
+					</li>
+					<li>
+						It improves accessibility and SEO by clearly labeling navigational content.
+					</li>
+				</ul>
+				</p>
+			</p>			
+					</li>
+					<li>
+						
+					</li>
+				</ul>
+			</p>
 			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600" id="sub-grouping-elements">
 				II) Grouping Elements
 			</h3>
