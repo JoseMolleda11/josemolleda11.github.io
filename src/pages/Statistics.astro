@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Magazine from '../components/magazines.astro';
+---
+
+<Layout>
+	<aside slot="jl">
+
+	</aside>
+	<main slot="mr" class="m-6">
+		<div>
+			<h1 class="text-center text-[1.9rem] font-bold dark:text-white">
+				Statistics
+			</h1>
+			<h2 class="text-[1.7rem] font-bold border-b border-gray-400 text-indigo-500
+			 dark:text-indigo-300 mb-2" id="section-Intro">
+			 	Introduction
+			</h2>
+			<p class="dark:text-white text-justify">
+				
+			</p>		
+		</div>
+	</main>
+	<aside slot="ab">
+		<div class="px-4">
+            <h2 class="text-lg font-bold text-center text-gray-800  dark:text-gray-400">
+                Index
+            </h2>
+            <section class="text-gray-700 dark:text-gray-300">
+			<a href="#section-Intro" class="hover:underline text-[1rem]">Introduction</a><br>
+
+            </section>
+	</aside>
+</Layout>
+
+<script is:inline>
+	document.addEventListener("DOMContentLoaded", () => {
+	  const buttons = document.querySelectorAll(".copy-btn");
+	
+	  buttons.forEach((btn) => {
+		btn.addEventListener("click", () => {
+		  const code = btn.previousElementSibling; // Busca el <code>
+		  if (code) {
+			navigator.clipboard.writeText(code.innerText.trim()).then(() => {
+			  btn.innerText = "Copiado ✅";
+			  setTimeout(() => {
+				btn.innerText = "Copiar";
+			  }, 2000);
+			});
+		  }
+		});
+	  });
+	});
+</script>

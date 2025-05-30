@@ -1,15 +1,16 @@
 ---
-// Puedes importar un array de posts si quieres usar datos dinámicos
 const LogoSrc = "/Logo.png";
+
 const posts = [
   {
-    title: "Financial Mathematics",
+    title: "Statistics",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     badge: "New",
     tags: ["rust", "tokio"],
-    icon: "/Logo.png",
+    icon: "/Statistics.png",
+    iconSize: "h-[6rem] w-[6rem]", 
     color: "#8d9196",
-    link: "/Financialmathematics" // <--- nueva página
+    link: "/Statistics"
   },
 ];
 ---
@@ -20,7 +21,7 @@ const posts = [
       <div class="flex items-start pb-4 border-b-[0.03rem] border-b-slate-400 mb-5 transform transition-transform duration-300 hover:scale-[1.01] rounded">
         <div class="w-44 h-32 bg-gray-100 flex items-center justify-center rounded-md dark:bg-[#24364d]">
           {post.icon.includes(".png") || post.icon.includes(".jpg") || post.icon.includes(".svg") ? (
-            <img src={post.icon} alt="icon" class="h-16 w-16 object-contain" />
+            <img src={post.icon} alt="icon" class={`object-contain ${post.iconSize}`} />
           ) : (
             <i class={`text-8xl text-center ${post.icon}`} style={`color: ${post.color}`}></i>
           )}
@@ -45,7 +46,6 @@ const posts = [
     </a>
   ))}
 </section>
-
 
 <!-- Agrega Font Awesome para los iconos -->
 <script src="https://kit.fontawesome.com/180054f428.js" crossorigin="anonymous"></script>
