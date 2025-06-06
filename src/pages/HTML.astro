@@ -114,12 +114,10 @@ import Magazine from '../components/magazines.astro';
 			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600" id="sub-section-element">
 				I) Section Element
 			</h3>
-			<p class="text-justify text-[1.1rem]">
-				<ul class="dark:text-white ml-5 text-justify" style="list-style-type: disc;">
-					<li>
-						<strong>&lt;nav&gt;:</strong> The tag is used to define a navigation section in a webpage. It typically contains links to other parts of the site or to 
+			<p class="text-justify text-[1.1rem]">					
+						<strong id="sub-nav">a) &lt;nav&gt;:</strong> The tag is used to define a navigation section in a webpage. It typically contains links to other parts of the site or to 
 						external resources.
-						<div class="relative bg-gray-200 dark:bg-gray-800 border border-gray-400 dark:border-gray-700 rounded-lg text-[0.9rem] font-mono overflow-x-auto">
+						<div class="relative bg-gray-200 dark:bg-gray-800 border border-gray-400 dark:border-gray-700 rounded-lg text-[0.9rem] font-mono overflow-x-auto my-1">
 							<pre><code>
 	<code class="text-blue-800 dark:text-blue-500">&lt;nav&gt;</code>
 		<code class="text-blue-800 dark:text-blue-500">&lt;ul&gt;</code>
@@ -130,29 +128,94 @@ import Magazine from '../components/magazines.astro';
 		<code class="text-blue-800 dark:text-blue-500">&lt;/ul&gt;</code>
 	<code class="text-blue-800 dark:text-blue-500">&lt;/nav&gt;</code>
 							</code></pre>
+							<button class="copy-btn absolute top-3 right-3 text-blue-600 dark:text-blue-400 text-xs hover:underline">Copiar</button>
+						</div>
+						<p class="dark:text-[rgb(238,88,88)] text-justify text-[rgb(24,24,103)] my-1">
+							<strong>Key Points:</strong>
+							<p class="text-justify text-[1.1rem]">
+							<ul class="dark:text-white ml-7 text-justify" style="list-style-type: disc;">
+								<li>
+									It helps semantically organize the navigation links.
+								</li>
+								<li>
+									It can appear multiple times on a page (e.g., main menu, footer links).
+								</li>
+								<li>
+									It improves accessibility and SEO by clearly labeling navigational content.
+								</li>
+							</ul>
+							</p>
+						</p>			
+						<strong id="sub-aside">b) &lt;aside&gt;:</strong> Represents sidebar content. 
+						<div class="relative bg-gray-200 dark:bg-gray-800 border border-gray-400 dark:border-gray-700 rounded-lg text-[0.9rem] font-mono overflow-x-auto my-1">
+							<pre><code>
+	<code class="text-blue-800 dark:text-blue-500">&lt;article&gt;</code>
+	<code class="text-blue-800 dark:text-blue-500">&lt;h2&gt;</code>Benefits of Exercise<code class="text-blue-800 dark:text-blue-500">&lt;/h2&gt;</code>
+	<code class="text-blue-800 dark:text-blue-500">&lt;p&gt;</code>Regular physical activity is one of the most ......<code class="text-blue-800 dark:text-blue-500">&lt;/p&gt;</code>
+	<code class="text-blue-800 dark:text-blue-500">&lt;aside&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&lt;h3&gt;</code>Did you know?<code class="text-blue-800 dark:text-blue-500">&lt;/h3&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&lt;p&gt;</code>Exercising for just 30 minutes a day .......<code class="text-blue-800 dark:text-blue-500">&lt;/p&gt;</code>
+	<code class="text-blue-800 dark:text-blue-500">&lt;/aside&gt;</code>
+	<code class="text-blue-800 dark:text-blue-500">&lt;/article&gt;</code>							
+							</code></pre>
 							<button class="copy-btn absolute top-2 right-3 text-blue-600 dark:text-blue-400 text-xs hover:underline">Copiar</button>
 						</div>
 						<p class="dark:text-[rgb(238,88,88)] text-justify text-[rgb(24,24,103)] my-1">
-				<strong>Key Points:</strong>
-				<p class="text-justify text-[1.1rem]">
-				<ul class="dark:text-white ml-7 text-justify" style="list-style-type: disc;">
-					<li>
-						It helps semantically organize the navigation links.
-					</li>
-					<li>
-						It can appear multiple times on a page (e.g., main menu, footer links).
-					</li>
-					<li>
-						It improves accessibility and SEO by clearly labeling navigational content.
-					</li>
-				</ul>
-				</p>
-			</p>			
-					</li>
-					<li>
-						
-					</li>
-				</ul>
+							<strong>Key Points:</strong>
+							<p class="text-justify text-[1.1rem]">
+							<ul class="dark:text-white ml-7 text-justify" style="list-style-type: disc;">
+								<li>
+									Author bios
+								</li>
+								<li>
+									Tips or notes
+								</li>
+								<li>
+									Glossaries
+								</li>
+							</ul>
+							</p>
+						</p>
+
+						<strong id="sub-section">c) &lt;section&gt;:</strong> is used to define a thematic grouping of content, typically with a heading.
+						<div class="relative bg-gray-200 dark:bg-gray-800 border border-gray-400 dark:border-gray-700 rounded-lg text-[0.9rem] font-mono overflow-x-auto my-1">
+							<pre><code>
+	<code class="text-blue-800 dark:text-blue-500">&lt;section</code>
+		<code class="text-blue-800 dark:text-blue-500">&lt;h2&gt;</code>Our Services<code class="text-blue-800 dark:text-blue-500">&lt;/h2&gt;</code>
+		<code class="text-blue-800 dark:text-blue-500">&lt;p&gt;</code>We offer web design, SEO, and content marketing to help your business grow.<code class="text-blue-800 dark:text-blue-500">&lt;/p&gt;</code>
+	<code class="text-blue-800 dark:text-blue-500">&lt;/section&gt;</code>
+							</code></pre>
+							<button class="copy-btn absolute top-2 right-3 text-blue-600 dark:text-blue-400 text-xs hover:underline">Copiar</button>
+						</div>
+						<p class="dark:text-[rgb(238,88,88)] text-justify text-[rgb(24,24,103)] my-1">
+							<strong>Key Points:</strong>
+							<p class="text-justify text-[1.1rem]">
+							<ul class="dark:text-white ml-7 text-justify" style="list-style-type: disc;">
+								<li>
+									To divide your page into meaningful blocks (like “About Us”, “Contact”, “Features”)
+								</li>
+								<li>
+									Inside an &lt;article&gt; to separate topics
+								</li>
+								<li>
+									Whenever the content could be listed in a table of contents
+								</li>
+							</ul>
+							</p>
+						</p>
+						<p class="dark:text-[rgb(238,88,88)] text-justify text-[rgb(24,24,103)] my-1">
+							<strong>Key Difference:</strong>
+							<p class="text-justify text-[1.1rem]">
+							<ul class="dark:text-white ml-7 text-justify" style="list-style-type: disc;">
+								<li>
+									&lt;div&gt;: generic container (no meaning)
+								</li>
+								<li>
+									&lt;section&gt;: semantic – it indicates a well-defined topic or theme
+								</li>
+							</ul>
+							</p>
+						</p>
 			</p>
 			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600" id="sub-grouping-elements">
 				II) Grouping Elements
@@ -166,7 +229,6 @@ import Magazine from '../components/magazines.astro';
 			<p class="dark:text-white text-justify"> 
 				Use <code>&lt;a href=&quot;&quot;&gt;&lt;/a&gt;</code> to add links (video, image, URL).
 			</p>
-
             <h2 class="text-[1.7rem] font-bold border-b border-gray-400 text-indigo-500
 			 dark:text-indigo-300 mb-2" id="section-Links">
                 Links
@@ -548,11 +610,14 @@ import Magazine from '../components/magazines.astro';
                 Index
             </h2>
             <section class="text-gray-700 dark:text-gray-300">
-			<a href="#section-Intro" class="hover:underline text-[1rem]">Introduction</a><br>
+			<p><a href="#section-Intro" class="hover:underline text-[1rem]">Introduction</a></p>
 
-            <a href="#section-Semantic" class="hover:underline text-[1rem]">Semantic HTML</a><br>
-            &nbsp;&nbsp;<a href="#sub-section-element" class="hover:underline text-[0.9rem]">Section Element</a><br>
-            &nbsp;&nbsp;<a href="#sub-grouping-elements" class="hover:underline text-[0.9rem]">Grouping Elements</a><br>
+            <p><a href="#section-Semantic" class="hover:underline text-[1rem]">Semantic HTML</a></p>
+            <p>&nbsp;&nbsp;<a href="#sub-section-element" class="hover:underline text-[0.9rem]">Section Element</a></p>
+			<p>&nbsp;&nbsp;&nbsp;<a href="#sub-nav" class="hover:underline text-[0.9rem]">&lt;nav&gt;</a></p>
+			<p>&nbsp;&nbsp;&nbsp;<a href="#sub-aside" class="hover:underline text-[0.9rem]">&lt;aside&gt;</a></p>
+			<p>&nbsp;&nbsp;&nbsp;<a href="#sub-section" class="hover:underline text-[0.9rem]">&lt;section&gt;</a></p>
+            <p>&nbsp;&nbsp;<a href="#sub-grouping-elements" class="hover:underline text-[0.9rem]">Grouping Elements</a></p>
             <a href="#section-Links" class="hover:underline text-[1rem]">Links</a><br>
 			&nbsp;&nbsp;<a href="#sub-paths" class="hover:underline text-[0.9rem]">Relative and Absolute Paths</a><br>
             &nbsp;&nbsp;<a href="#sub-internal-links" class="hover:underline text-[0.9rem]">Internal Links</a><br>
