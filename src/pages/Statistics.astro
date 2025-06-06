@@ -23,13 +23,13 @@ import Magazine from '../components/magazines.astro';
 				<u>Random and Systematic Sampling</u>
 			</h4>
 			<p class="dark:text-[rgb(254,129,129)] text-justify text-[rgb(24,24,103)]">
-				<strong>✦ Population and Sample:</strong>
+				<strong class="text-[1.05rem]">✦ Population and Sample:</strong>
 				<p class="text-justify text-[1.1rem]">
-				<ul class="dark:text-white ml-7" style="list-style-type: disc;">
-					<li>
+				<ul class="dark:text-white ml-3 list-none">
+					<li class="before:content-['-'] before:mr-1">
 						<strong>Population (N):</strong> It's the complete set of all items that interest an investigator.
 					</li>
-					<li>
+					<li class="before:content-['-'] before:mr-1">
 						<strong>Sample (n):</strong> It's is an observed subset (or portion) of a population
 					</li>
 				</ul>
@@ -38,7 +38,59 @@ import Magazine from '../components/magazines.astro';
 			<p class="dark:text-white text-justify">
 				The sample data must have some validity over the general population. 
 				In addition, we must follow in the sample selection process is randomization.
-			</p>		
+			</p>
+			<p class="dark:text-[rgb(254,129,129)] text-justify text-[rgb(24,24,103)]">
+				<strong class="text-[1.05rem]">✦ Random Sampling:</strong>
+			</p>
+			<p class="dark:text-white text-justify">
+				Random sampling is a method of selecting a sample from a population where each individual has an equal chance of being chosen. 
+				<p><strong class="dark:text-white">Example:</strong></p>
+				<p class="text-justify dark:text-white">
+					Imagine you have a class of 100 students, and you want to choose 5 students to answer a survey. 
+					If you write all their names on slips of paper, put them in a box, and pick 5 without looking — that’s random sampling.
+				</p>
+			</p>	
+			<p class="dark:text-[rgb(254,129,129)] text-justify text-[rgb(24,24,103)]">
+				<strong class="text-[1.05rem]">✦ Systematic Sampling:</strong>
+			</p>
+			<p class="dark:text-white text-justify">
+				It's is a method where you:
+				<p class="text-justify dark:text-white pl-2">
+					1. List all members of the population. <br>
+					2. Choose a random starting point. <br>
+					3. Select every k-th element after that. <br>
+				</p>
+				<p class="dark:text-white text-justify">Where:</p>
+				<div class="flex justify-center items-center h-full">
+					<div class="border rounded-lg p-2 dark:bg-gray-800 w-fit border-gray-950">
+						<div class="text-lg text-gray-800 dark:text-white text-center">
+						<em>k =</em>
+						<span class="inline-block align-middle">
+						<div class="flex flex-col items-center">
+							<span class="border-b border-gray-500 px-1">N</span>
+							<span class="px-1">n</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<p class="text-justify dark:text-white pl-2">
+					N = population size <br>
+					n = sample size <br>
+					<em>k =</em> sampling interval <br>
+				</p>
+				<p><strong class="dark:text-white">Example:</strong></p>
+				<p class="text-justify dark:text-white">
+					You have 100 people, and you want a sample of 10. <br>
+					<p class="text-justify dark:text-white pl-2">
+					- First, you calculate k=100/10=10 <br>
+					- Then you randomly pick a starting number between 1 and 10 (say 4)  <br>
+					- Your sample is: 4, 14, 24, 34, 44, 54, 64, 74, 84, 94 <br>
+					</p>
+					<p class="dark:text-white text-justify">
+					Each person is chosen every 10 steps, starting from position 4.
+					</p>
+				</p>				
+			</p>			
 		</div>
 	</main>
 	<aside slot="ab">
