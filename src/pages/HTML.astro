@@ -220,6 +220,21 @@ import Magazine from '../components/magazines.astro';
 			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600" id="sub-grouping-elements">
 				II) Grouping Elements
 			</h3>
+			<p class="text-justify text-[1.1rem]">	
+				<strong id="sub-main">a) &lt;main&gt;:</strong> This element represents the main content of an HTML document. 
+				It contains the unique content that is central to the purpose of the page, excluding things like navigation menus, sidebars, footers, or repeated content.
+				<div class="relative bg-gray-200 dark:bg-gray-800 border border-gray-400 dark:border-gray-700 rounded-lg text-[0.9rem] font-mono overflow-x-auto my-1">
+							<pre><code>
+	<code class="text-blue-800 dark:text-blue-500">&lt;main&gt;</code>  
+	&nbsp;&nbsp;&nbsp;&nbsp;<code class="text-blue-800 dark:text-blue-500">&lt;h1&gt;</code>Welcome to Our Website<code class="text-blue-800 dark:text-blue-500">&lt;/h1&gt;</code>  
+	&nbsp;&nbsp;&nbsp;&nbsp;<code class="text-blue-800 dark:text-blue-500">&lt;p&gt;</code>We are glad to have you here. Explore our content and enjoy your stay.<code class="text-blue-800 dark:text-blue-500">&lt;/p&gt;</code>  
+	<code class="text-blue-800 dark:text-blue-500">&lt;/main&gt;</code>
+							</code></pre>
+							<button class="copy-btn absolute top-2 right-3 text-blue-600 dark:text-blue-400 text-xs hover:underline">Copiar</button>
+						</div>
+				<strong id="sub-div">b) &lt;div&gt;:</strong>
+
+			</p>
 			<h3 class="text-[1.5rem] font-bold text-green-800 dark:text-green-600">
 				III) Heading Elements
 			</h3>
@@ -351,7 +366,7 @@ import Magazine from '../components/magazines.astro';
 				Embedded content
 			</h2>
 			<p class="text-justify text-[1.1rem]">
-				<ul class="dark:text-white ml-5" style="list-style-type: disc;">
+				<ul class="dark:text-white ml-5 text-justify" style="list-style-type: disc;">
 					<li>
 						Embedded content in HTML refers to including external resources within a webpage. This can include videos, maps, documents, widgets, and more. 
 					</li>
@@ -618,6 +633,8 @@ import Magazine from '../components/magazines.astro';
 			<p>&nbsp;&nbsp;&nbsp;<a href="#sub-aside" class="hover:underline text-[0.9rem]">&lt;aside&gt;</a></p>
 			<p>&nbsp;&nbsp;&nbsp;<a href="#sub-section" class="hover:underline text-[0.9rem]">&lt;section&gt;</a></p>
             <p>&nbsp;&nbsp;<a href="#sub-grouping-elements" class="hover:underline text-[0.9rem]">Grouping Elements</a></p>
+			<p>&nbsp;&nbsp;&nbsp;<a href="#sub-main" class="hover:underline text-[0.9rem]">&lt;main&gt;</a></p>
+			<p>&nbsp;&nbsp;&nbsp;<a href="#sub-div" class="hover:underline text-[0.9rem]">&lt;div&gt;</a></p>
             <a href="#section-Links" class="hover:underline text-[1rem]">Links</a><br>
 			&nbsp;&nbsp;<a href="#sub-paths" class="hover:underline text-[0.9rem]">Relative and Absolute Paths</a><br>
             &nbsp;&nbsp;<a href="#sub-internal-links" class="hover:underline text-[0.9rem]">Internal Links</a><br>
