@@ -5,20 +5,15 @@ import Magazine from '../components/magazines.astro';
 
 <Layout>
 	<aside slot="jl">
-
 	</aside>
 	<main slot="mr" class="m-6">
-		<div>
-			<h1 class="text-center text-[1.9rem] font-bold dark:text-white">
-				HTML
-			</h1>
-			<h2 class="text-[1.7rem] font-bold border-b border-gray-400 text-indigo-500
-			 dark:text-indigo-300 mb-2" id="section-Intro">
-			 	Introduction
-			</h2>
-			<p class="dark:text-white text-justify">
+		<section>
+			<h1 class="dark:text-white">HTML</h1>
+			<h2 class="dark:text-indigo-300 mb-2" id="section-Intro">Introduction</h2>
+			<p class="dark:text-white">
 				HTML (HyperText Markup Language) is the standard language used to structure content on the web.
 			</p>
+		</section>					
 			<div class="flex justify-center">
 				<table class="divide-y divide-gray-500 shadow-lg overflow-hidden my-3 border border-gray-400">
 					<thead class="bg-gray-500 text-white">
@@ -616,14 +611,12 @@ import Magazine from '../components/magazines.astro';
 					</ul>
 				</div>
 			</div>
-
-		</div>
 	</main>
 	<aside slot="ab">
 		<div class="px-4">
-            <h2 class="text-lg font-bold text-center text-gray-800  dark:text-gray-400">
+            <h7 class="text-lg font-bold text-center text-gray-800  dark:text-gray-400">
                 Index
-            </h2>
+            </h7>
             <section class="text-gray-700 dark:text-gray-300">
 			<p><a href="#section-Intro" class="hover:underline text-[1rem]">Introduction</a></p>
 
@@ -671,5 +664,21 @@ import Magazine from '../components/magazines.astro';
 </script>
 
 <style>
-	
+	h1 {
+		font-size: 2rem;
+		font-weight: bold;
+		text-align: center;
+		color: #010308;
+	}
+	h2 {
+		font-size: 1.7rem;
+		font-weight: bold;
+		border-bottom: 2px solid #ccc;
+		color: #4f46e5; 
+		margin-bottom: 0.5rem;
+	}
+	p {
+		font-size: 1.03rem;
+		text-align: justify;
+	}
 </style>
