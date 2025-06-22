@@ -13,9 +13,8 @@ import Magazine from '../components/magazines.astro';
 			<p class="dark:text-white">
 				HTML (HyperText Markup Language) is the standard language used to structure content on the web.
 			</p>
-		</section>					
 			<div class="flex justify-center">
-				<table class="divide-y divide-gray-500 shadow-lg overflow-hidden my-3 border border-gray-400">
+				<table>
 					<thead class="bg-gray-500 text-white">
 					  <tr>
 						<th class="px-2 text-center tracking-wider ">Concept</th>
@@ -56,8 +55,12 @@ import Magazine from '../components/magazines.astro';
 					</tbody>
 				</table>
 			</div>
+		</section>
+		<section>
+		
+		</section>				
 			<p class="dark:text-[rgba(162,187,49,0.69)] text-justify text-[rgb(24,24,103)]">
-				<strong>✦ Why it matters:</strong>
+				<strong>Why it matters:</strong>
 				<p class="text-justify text-[1.1rem]">
 				<ul class="dark:text-white ml-7" style="list-style-type: disc;">
 					<li>
@@ -76,7 +79,7 @@ import Magazine from '../components/magazines.astro';
 				</p>
 			</p>
 			<p class="dark:text-[rgba(162,187,49,0.69)]  text-justify text-[rgb(24,24,103)]">
-				<strong>✦ Basic Structure</strong>
+				<strong>Basic Structure</strong>
 				<div class="relative bg-gray-200 dark:bg-gray-800 border border-gray-400 dark:border-gray-700 rounded-lg font-mono overflow-x-auto dark:text-white text-[0.9rem] my-1">
 				<pre><code>
 		<code class="text-blue-800 dark:text-blue-500">&lt;!DOCTYPE html&gt;</code>
@@ -680,5 +683,16 @@ import Magazine from '../components/magazines.astro';
 	p {
 		font-size: 1.03rem;
 		text-align: justify;
+	}
+	table {
+	width: 100%;
+	margin: 0.5rem 0;
+	border-collapse: collapse;
+	border: 1px solid gray; /* convertimos "border: gray" en una declaración válida */
+	margin-top: 0.5rem;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+	            0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+	overflow: hidden;
+	border: 1px solid #9ca3af; /* border-gray-400 */
 	}
 </style>
